@@ -6,6 +6,7 @@
 监控目标：
 - 016057 博时纳斯达克100ETF联接C
 - 006075 博时标普500ETF联接C
+- 160213 国泰纳斯达克100指数
 
 推送：
 - PushPlus txt 文本格式
@@ -29,11 +30,13 @@ PUSHPLUS_TOKEN = os.environ.get("PUSHPLUS_TOKEN")
 FUNDS = {
     "016057": "博时纳斯达克100ETF联接C",
     "006075": "博时标普500ETF联接C",
+    "160213": "国泰纳斯达克100指数",
 }
 
 BASELINE_STATUS = {
     "016057": "暂停申购",
     "006075": "暂停申购",
+    "160213": "暂停申购",
 }
 
 STATUS_FILE = "fund_purchase_baseline.json"
