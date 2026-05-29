@@ -2,7 +2,7 @@ name: Fund Purchase Monitor
 
 on:
   schedule:
-    - cron: "0 1,5,9 * * 1-5"
+    - cron: "0 1 * * 1-5"
   workflow_dispatch:
 
 permissions:
@@ -37,4 +37,5 @@ jobs:
           git config user.email "github-actions@github.com"
           git add fund_purchase_baseline.json fund_purchase_monitor_result.json || true
           git diff --cached --quiet || git commit -m "update fund purchase monitor state"
+          git pull --rebase origin main
           git push
